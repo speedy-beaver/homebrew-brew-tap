@@ -6,6 +6,12 @@ class Timg < Formula
   license "GPL-2.0-only"
   head "https://github.com/hzeller/timg.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/speedy-beaver/homebrew-brew-tap/releases/download/timg-1.4.0"
+    sha256 cellar: :any,                 catalina:     "69e4735ae47906d1a1853697ddcb80fa41cf82ce101e506a9ed89e927b567814"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "10192ee8c6f5c891577b3e95301d4795fac79d14b683089c7cde90d935278b60"
+  end
+
   depends_on "cmake" => :build
   depends_on "ffmpeg"
   depends_on "graphicsmagick"
